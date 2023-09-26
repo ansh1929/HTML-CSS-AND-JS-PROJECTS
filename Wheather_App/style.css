@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&family=Poppins:wght@500&family=Roboto+Slab&family=Ubuntu&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(156, 156, 194);
+}
+
+/* hearder starts from here */
+
+.header nav{
+    background-color: rgba(192, 192, 250, 0.8);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    border-bottom: 2px solid rgb(193, 193, 244);
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: whitesmoke;
+    border-radius: 50px;
+}
+
+.search-box input{
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    min-width: 100px;
+}
+
+.search-box button{
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    
+}
+
+.search-box i{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu i{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bx-search:hover{
+    color: green;
+}
+
+.header input::placeholder{
+    opacity: 0.7;
+}
+
+.menu{
+    padding-top: 5px;
+    display: none;  
+}
+
+.search-bar{
+    padding: 10px 10px;
+    background-color: rgb(210, 210, 248);
+    display: none;
+    transition: all ease 5s;
+}
+
+.toggle-class{
+    display: block;
+}
+
+/* Responsive navbar */
+
+@media (max-width:700px) {
+    .none{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .header nav{
+        padding: 0.5rem 1rem;
+    }
+
+    .header h1{
+        font-size: 1.2rem;
+    }
+}
+
+/* NAVBAR ENDS HERE */
+
+
+/* WEATHER DATA */
+
+.current-weather{
+    padding: 0.5rem 1.5rem;
+    margin: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 15px;
+    background-color: rgba(242, 241, 241, 0.4);
+}
+
+#city, #time{
+    font-weight: bold;
+    color: green;
+}
+
+
+.weather-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.weather-data section{
+    height: max-content;
+}
+
+.left-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem 0.5rem;
+    background-color: rgba(242, 241, 241, 0.4);
+    border-radius: 15px;
+    min-height: 23rem;
+}
+
+.left-box .status{
+    text-align: center;
+}
+
+#temprature{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#weather-status{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.left-box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.right-box{
+    flex: 3;
+    padding: 1rem 0.5rem;
+    background-color: rgba(242, 241, 241, 0.4);
+    border-radius: 15px;
+    min-height: 23rem;
+}
+
+.invalid-city{
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-heading{
+    padding-right: 0!important;
+    text-align: center;
+}
+
+@media (max-width:500px){
+    .weather-data{
+        flex-direction: column;
+    }
+
+    .right-box , .left-box{
+        width: 100%;
+    }
+
+    .current-weather{
+        padding: 0.5rem 0.5rem;
+    }
+
+    .current-weather h4{
+        font-size: 1rem;
+        font-weight: 100;
+    }
+
+    #temprature{
+        font-size: 1rem;
+    }
+
+    #weather-status{
+        font-size: 1.5rem;
+    }
+}
+/* WHEATHER DATA ENDS HERE */
+
+.footer{
+    padding-bottom: 1.5rem;
+}
+
+.footer footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    background-color: rgba(242, 241, 241, 0.4);
+    text-align: center;
+    font-size: 14px;
+}
+

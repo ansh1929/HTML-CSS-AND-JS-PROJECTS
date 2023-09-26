@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- NAVBAR -->
+
+    <div class="header">
+        <nav>
+            <h1>WheatherApp</h1>
+            <div class="search-box none">
+                <input type="text" id="upper-input-value" placeholder="search the city">
+                <button id="upper-btn"><i class='bx bx-search'></i></button>
+            </div>
+            <div class="menu toggle-btn"><i class='bx bx-menu'></i></div>
+        </nav>
+        <div class="search-bar">
+            <div class="search-box">
+                <input type="text" id="lower-input-value" placeholder="search the city">
+                <button id="lower-btn"><i class='bx bx-search'></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR ENDS HERE -->
+
+    <!-- WHEATHER DATA -->
+
+    <div class="current-weather">
+        <h4>Current Weather of : <span id="city">null</span></h4>
+        <p>Time : <span id="time"></span></p>
+    </div>
+
+    <div class="weather-data">
+        <section class="left-box">
+            <div class="img">
+                <img id="img" src="" alt="">
+            </div>
+            <div class="status">
+                <p id="temprature">null<sup>°C</sup></p>
+                <p id="weather-status">null</p>
+            </div>
+        </section>
+        <section class="right-box">
+            <div class="weather-details">
+                <table width="100%">
+                    <tr>
+                        <td colspan="3" class="data-heading"><h1>Weather-Details</h1></td>
+                    </tr>
+                    <tr>
+                        <td>Wind speed</td>
+                        <td>:</td>
+                        <td id="wind">null</td>
+                    </tr>
+                    <tr>
+                        <td>Humidity</td>
+                        <td>:</td>
+                        <td id="humidity">null</td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Temprature</td>
+                        <td>:</td>
+                        <td id="max-temp">null</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum Temprature</td>
+                        <td>:</td>
+                        <td id="min-temp">null</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="data-heading"><h1>Coords</h1></td>
+                    </tr>
+                    <tr>
+                        <td>Latitude</td>
+                        <td>:</td>
+                        <td id="latitude">null</td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td>:</td>
+                        <td id="longitude">null</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- WHEATHER DATA ENDS HERE -->
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <footer>
+            <p>Thank you for using our website to know the weather data in your city</p>
+        </footer>
+    </div>
+    <!-- FOOTER ENDS HERE -->
+    
+</body>
+<script src="script.js"></script>
+</html>

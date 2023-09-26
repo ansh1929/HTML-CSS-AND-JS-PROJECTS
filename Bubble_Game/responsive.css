@@ -1,0 +1,72 @@
+@media (max-width:768px){
+    .main-container{
+        width: 95%;
+        height: 95%;
+    }
+
+    .top-pannel{
+        height: 3rem;
+    }
+
+    .top-pannel ul{
+        padding: 1rem 1rem;
+    }
+
+    #first-btn{
+        padding: 0.2rem 0.3rem;
+        font-size: 1rem;
+    }
+
+    #number ,#timer,#score{
+        padding: 0.2rem 0.3rem;
+        box-shadow: none;
+    }
+}
+
+@media (max-width:500px){
+    body{
+        display: block;
+    }
+    .main-container{
+        height: 90%;
+        margin: 10px auto;
+    }
+    #first-btn{
+        display: none;
+    }
+    .top-pannel{
+        height: 5rem;
+    }
+
+    .top-pannel ul{
+        justify-content: flex-start;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    ul li{
+        text-align: center;
+    }
+
+    .game-description h1{
+        font-size: 1.5rem;
+    }
+
+    .game-description h3{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .bottom-pannel .game-description{
+        padding: 0rem 1rem;
+    }
+
+    #second-btn{
+        margin: 5px auto;
+        display: block;
+        padding: 0.5rem 3rem;
+        background-color: rgb(3, 25, 41);
+        color: white;
+        box-shadow: inset 0px 0px 5px white;
+    }
+}

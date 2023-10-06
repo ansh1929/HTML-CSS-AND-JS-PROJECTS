@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&family=Poppins:wght@300;400;700&family=Roboto&family=Roboto+Mono:wght@700&family=Roboto+Slab&family=Ubuntu&display=swap');
+
+:root{
+    --primary-color: rgb(8, 137, 137);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(145, 184, 184);
+    padding: 1.5rem;
+    /* height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.container{
+    height: min-content;
+    max-width: 500px;
+    background-color: white;
+    padding: 3rem 1.5rem;
+    border-radius: 10px;
+    margin: 5rem auto;
+}
+
+.upper-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width:250px) {
+    .upper-section{
+        flex-direction: column;
+    }
+}
+
+
+.upper-section input,button{
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+
+.upper-section input{
+    width: 85%;
+    border-bottom: 2px solid var(--primary-color);
+    background-color: transparent;
+}
+
+input::placeholder{
+    color: lightgray;
+}
+
+.upper-section button{
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.lower-section{
+    margin-top: 2rem;
+}
+
+#word-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#word-description p{
+    color: lightgray;
+    line-height: 0.8;
+    margin-top: 0.5rem;
+}
+
+#word-description button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: darkgray;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#meaning{
+    margin-top: 1rem;
+    opacity: 0.7;
+}
+
+#sentence{
+    margin-top: 1rem;
+    opacity: 0.7;
+    border-left: 3px solid var(--primary-color);
+    padding: 0.5rem 0.7rem;
+}
+
+.read-more{
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 0.8em;
+}
+
+.read-more a{
+    text-decoration: none;
+    color: white;
+}

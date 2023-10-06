@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@700&family=Roboto+Slab&family=Ubuntu&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(360deg, #8EC5FC 0%, #E0C3FC 100%);
+    height: 100vh;
+    padding-top:2rem ;
+}
+
+.game-description{
+    width: 100%;
+    height: 15vh;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.mynav{
+    width: 100%;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.mynav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.mynav input{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0.5rem 0;
+    text-align: center;
+    min-width: 100px;
+    width: 100%;
+    font-weight: bold;
+    background-color: white;
+}
+
+.mynav input::placeholder{
+    font-weight: 500;
+}
+
+.mynav button{
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+    min-width: 15px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: all ease 0.2s;
+}
+
+.mynav button:hover{
+    background-color: #d4b0f6;
+    cursor: pointer;
+}
+
+.bottom-pannel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.result{
+        width: 400px;
+        height: max-content;
+        padding: 1rem 0.5rem;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+.display-msg{
+    color: rgb(104, 101, 101);
+    font-size: 2em;
+    margin-top: 2rem;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 0.3rem;
+    display: none;
+}
+
+#endgame-msg{
+    font-size: 0.5em;
+}
+
+#start-btn{
+    border: none;
+    outline: none;
+    margin-top: 1.5rem;
+    background-color: whitesmoke;
+    min-width: 15px;
+    width: 50%;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;   
+    background-color: #b87bf28b;
+    box-sizing: border-box;
+    transition: all ease 0.9s;
+    display: none;
+}
+
+#start-btn:hover{
+    border:1px solid purple;
+}
+
+@media (max-width:640px){
+    .display-msg{
+        font-size: 1.3em;
+    }
+
+    .display-chances{
+        font-size: 1em;
+    }
+
+    .result h3{
+        font-size: 0.7em;
+    }
+}
+
+.guesses{
+    background-color: white;
+    padding: 0.2rem 0.4rem;
+    border-radius: 10px;
+    display: none;
+}
+
+#chances{
+    color: darkblue;
+}

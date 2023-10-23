@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@700&family=Roboto+Slab&family=Roboto:wght@300;400&family=Ubuntu&display=swap');
+
+:root{
+    --theme-color: rgb(214, 214, 13);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(10, 10, 15);
+}
+
+/* NAVBAR STARTS HERE */
+
+.navbar{
+    height: 8vh;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.logo span{
+    color: var(--theme-color);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+
+#search-box,#search-btn{
+    padding: 0.4rem 1rem;
+    font-size: 0.9em;
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+#search-box{
+    border-radius: 50px;
+    padding-right: 2rem;
+    width: 100%;
+    left: 28px;
+    z-index: 0;
+    background-color: rgb(47, 45, 45);
+    color: white;
+}
+
+#search-btn{
+    border-radius: 50px;
+    background-color: var(--theme-color);
+    color: black;
+    font-weight: 900;
+}
+
+.menu{
+    font-size: 1.5em;
+    display: none;
+}
+
+@media (max-width:640px) {
+    .menu{
+        display: block;
+    }
+    .searching-area{
+        display: none;
+    }
+}
+/* NAVBAR ENDS HERE */

@@ -1,0 +1,176 @@
+:root{
+    --theme-color: rgb(214, 214, 13);
+    --primary-color: rgb(10, 10, 15);    
+}
+
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* GENERE LIST */
+
+.left-box{
+    width: 13%;
+    background-color: var(--primary-color);
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    position: sticky;
+    top: 8vh;
+    left: 0;
+}
+
+.left-box h2{
+    color: white;
+    margin-bottom: 0.6rem;
+}
+
+.genre-list li{
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    list-style-type: none;
+}
+
+
+.genre-list h2{
+    color: white;
+}
+
+.left-box a{
+    color: gray;
+    text-decoration: none;
+}
+
+.left-box a:hover{
+    color: var(--theme-color);
+}
+
+
+/* GENRE LIST ENDS HERE */
+
+
+
+/* MOIVE SECTION */
+
+.movies-container{
+    width: 87%;
+    height: 92vh;
+    padding: 1rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgb(33, 28, 28);
+    overflow-y: scroll;
+}
+
+.movies-container h1{
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 1rem ;
+}
+
+.movies-container h1 span{
+    color: var(--theme-color);
+}
+
+.popular-movies,.upcoming-movies,.toprated-movies{
+    margin-bottom: 1rem;
+}
+
+.upcoming-movies{
+    margin-top: 2rem;
+}
+
+
+.movies-list{
+    display: flex;
+    gap: 0.7rem;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+/*STYLE FOR  MOVIE CARD  */
+
+
+.movie-poster{
+    height: 250px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* border: 1px solid white; */
+}
+
+.movie-poster img{
+    width: 100%;
+    height: 100%;
+    object-fit: top;
+}
+
+.movie-details{
+    width: 200px;
+    color: white;
+    padding: 0.6rem 0.2rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.movie-stats{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    font-weight: 700;
+}
+
+.movie-year{
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    background-color: rgba(116, 116, 171, 0.39);
+}
+/* MOVIE CARD ENDS HERE */
+
+.view-more{
+    height: 250px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.354);
+    box-shadow: inset 0px 0px 20px whitesmoke;
+    transition: all ease 0.5s;
+}
+
+.view-more:hover{
+    background-color: gray;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+
+/* MOIVE SECTION ENDS HERE */
+
+/* MOVIES BY GENRE */
+
+.genre-movies-container{
+    width: 100%;
+    height: max-content;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* MOVIES BY GENRE ENDS HERE */
+
+

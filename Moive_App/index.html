@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moive-Mania</title>
+    <link rel="stylesheet" href="Style/navbar.css">
+    <link rel="stylesheet" href="Style/main.css">
+    <link rel="stylesheet" href="style/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- NAVBAR STARTS HERE -->
+    <div class="navbar">
+        <nav>
+            <h2 class="logo">Moive<span>Mania</span>
+            </h2>
+            <ul class="searching-area">
+                <li><input type="text" placeholder="enter movie name here..." id="search-box"></li>
+                <li><button id="search-btn">search</button></li>
+            </ul>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+
+    <!-- NAVBAR ENDS HERE -->
+
+
+    <main class="main-container">
+
+        <!-- LEFT BOX -->
+        <section class="left-box">
+            <h2>Genres</h2>
+            <ul class="genre-list">
+                <li><a href="#" id="28">Action</a></li>
+                <li><a href="#" id="12">Adventure</a></li>
+                <li><a href="#" id="16">Animation</a></li>
+                <li><a href="#" id="35">Comedy</a></li>
+                <li><a href="#" id="80">Crime</a></li>
+                <li><a href="#" id="99">Documentary</a></li>
+                <li><a href="#" id="18">Drama</a></li>
+                <li><a href="#" id="10751">Family</a></li>
+                <li><a href="#" id="14">Fantasy</a></li>
+                <li><a href="#" id="36">History</a></li>
+                <li><a href="#" id="27">Horror</a></li>
+                <li><a href="#" id="10402">Music</a></li>
+                <li><a href="#" id="9648">Mystery</a></li>
+                <li><a href="#" id="10749">Romance</a></li>
+                <li><a href="#" id="878">Science Fiction</a></li>
+                <li><a href="#" id="53">Thriller</a></li>
+                <li><a href="#" id="10752">War</a></li>
+                <li><a href="#" id="37">Western</a></li>
+            </ul>
+        </section>
+        <!-- LEFT BOX ENDS HERE -->
+
+
+        <!-- RIGHT BOX -->
+        <section class="movies-container">
+            
+            <div class="slider-container">
+                <div class="slides">
+                    <div class="slide"><img src="slide.jpg"></div>
+                </div>
+            </div>
+
+            <!-- HOME PAGE  -->
+            <div class="upcoming-movies">
+                <h1>Upcoming <span>Movies</span></h1>
+                <div class="movies-list" id="upcoming">
+                    
+                    <!-- MOVIE CARD WILL BE ADDED HERE THROUGH JAVASCRIPT-->
+                </div>
+            </div>
+
+            <div class="popular-movies">
+                <h1>Popular <span>Movies</span></h1>
+                <div class="movies-list" id="popular">
+                    <!-- MOVIE CARD WILL BE ADDED HERE THROUGH JAVASCRIPT-->
+                </div>
+            </div>
+
+            <div class="toprated-movies">
+                <h1>Top Rated <span>Movies</span></h1>
+                <div class="movies-list" id="top_rated">
+                    <!-- MOVIE CARD WILL BE ADDED HERE THROUGH JAVASCRIPT-->
+                </div>
+            </div>
+            <!-- HOME PAGE ENDS HERE  -->
+
+
+        </section>
+        <!-- RIGHT BOX ENDS HERE -->
+
+
+    </main>
+
+    <!-- <footer>
+        <p>Thanks for using the app</p>
+    </footer> -->
+</body>
+<script src="JS/home.js"></script>
+<script src="JS/genreMovie.js"></script>
+<script src="JS/cardmaker.js"></script>
+</html>

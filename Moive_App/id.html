@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Append DIV</title>
+    <style>
+      .box{
+        width: 50vw;
+        height: 10vh;
+        border: 1px solid black;
+        margin: 10px;
+      }
+    </style>
+</head>
+<body>
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<script>
+    // Function to create and append a div element
+
+        let elems = document.querySelectorAll(".box")
+        var div = document.createElement("div");
+        div.textContent = "This is a dynamically created div.";
+        elems[0].appendChild(div)
+        elems[1].appendChild(div)
+        elems[2].appendChild(div)
+   
+        console.log(elems[0],elems[1],elems[2])
+
+ 
+</script>
+
+</body>
+</html>

@@ -12,8 +12,49 @@
 	const response3 = await fetch(topRatedMovie);
 	const data3 = await response3.json();
 
+	const nowPlayingMovie = "https://api.themoviedb.org/3/movie/now_playing?api_key=f02887f0a810237e3e7fad0213050302&page=3";
+	const response4 = await fetch(nowPlayingMovie);
+	const data4 = await response4.json();
+
+	// slider(data4.results)
 	showMovies(data1.results, data2.results, data3.results)
 })();
+
+//FUNCTION THAT MAKES THE MOVIE CARD
+function cardMaker(value){
+    let date = new Date(value.release_date)
+	let releaseYear = date.getFullYear();
+
+    let card = `
+    <div class="movie-card">
+        <div class="movie-poster">
+            <img src="${value.poster_path ? IMGPATH + value.poster_path : "Image/img-not-found.png"}" id="${value.title}">
+        </div>
+        <div class="movie-details">
+            <h4>${value.title}</h4>
+            <div>
+                <span class="movie-rating">&#11088 ${value.vote_average.toFixed(1)}</span>
+                <span class="movie-year">${releaseYear}</span>
+            </div>
+        </div>
+    </div>`
+
+    return card;
+};
+
+
+//FUNCTION THAT CREATE THE VIEW MORE BUTTON
+function viewMore(id){
+    const outerDiv = document.createElement("div");
+	const innerDiv = document.createElement("div");
+	innerDiv.classList.add("view-more");
+	innerDiv.id = (`${id}`);
+	innerDiv.textContent = "View More";
+	outerDiv.appendChild(innerDiv);
+
+    return outerDiv;
+}
+
 
 
 //SHOW MOVIES 
@@ -50,8 +91,8 @@ let page = 1;
 
 homeMoviesContainer.forEach((element) => {
 	element.addEventListener("click", function (e) {
-		if (e.target.classList.value == "movieCard") {
-			console.log("movie details yet to display")
+		if (e.target.tagName == "IMG") {
+			fetchingMovieDetails(e.target.id)
 		} else if (e.target.classList.value == "view-more") {
 			page++
 			fetchingMoreHomeMovies(e, page);
@@ -109,30 +150,12 @@ async function searchMovies(moviename) {
 	allMoviesContainer.innerHTML = "";
 
 	//CREATEING A NEW DIV AND APPEND IT TO THE RIGHT BOX
-	const element = document.createElement("div");
-	element.classList.add("genre-movies");
-	allMoviesContainer.appendChild(element)
+	const divElement = document.createElement("div");
+	divElement.classList.add("search-movies-container");
+	allMoviesContainer.appendChild(divElement)
 
 	movieData.map((value) => {
-		let date = new Date(value.release_date)
-		let releaseYear = date.getFullYear();
-
-		element.innerHTML += `
-					<div class="movie-card">
-						<div class="movie-poster">
-							<img 
-							src="${value.poster_path ? IMGPATH + value.poster_path : "img-not-found.png"}" 
-							alt=""
-							>
-						</div>
-						<div class="movie-details">
-							<h4>${value.title}</h4>
-							<div class="movie-stats">
-								<span class="movie-rating">&#11088 ${value.vote_average.toFixed(1)}</span>
-								<span class="movie-year">${releaseYear}</span>
-							</div>
-						</div>
-					</div>`
+		divElement.innerHTML += cardMaker(value)
 	})
 
 }
@@ -146,9 +169,6 @@ logo.addEventListener(
 		location.reload();
 	}
 )
-
-
-
 
 
 

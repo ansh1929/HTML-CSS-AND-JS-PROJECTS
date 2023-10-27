@@ -1,5 +1,86 @@
+.slider-container{
+    height: 80vh;
+    width: 100%;
+    overflow: scroll;
+    border-radius: 15px;
+}
+
 .slides{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.slide{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all ease 2s;     
+}
+
+.slide img{
     width: 100%;
     height: 100%;
-    border: 1px solid white;
+    position: absolute;
+}
+
+.fade{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.movie-description{
+    width: 40%;
+    height: max-content;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: white;
+    padding: 0.5rem;
+}
+
+.movie-description h2{
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+
+.movie-description div{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.movie-description button{
+    border: none;
+    outline: none;
+    background-color: red;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#previousBtn, #nextBtn{
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--theme-color);
+}
+
+#previousBtn{
+    left: 10px;
+}
+
+#nextBtn{
+    right: 10px;
 }

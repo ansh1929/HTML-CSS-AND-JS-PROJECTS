@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@500&family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@700&family=Roboto+Slab&family=Roboto:wght@300;400&family=Ubuntu&display=swap');
 
-:root{
-    --theme-color: rgb(214, 214, 13);
-}
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+img{
+    width: 100%;
+    height: 100%;
 }
 
 body{
@@ -37,7 +38,14 @@ nav{
     color: white;
 }
 
+.navbar div,ul{
+    height: 100%;
+}
+
 .logo{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -48,8 +56,8 @@ nav{
 nav ul{
     list-style: none;
     display: flex;
+    align-items: center;
 }
-
 
 #search-box,#search-btn{
     padding: 0.4rem 1rem;

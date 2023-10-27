@@ -7,20 +7,16 @@
     <link rel="stylesheet" href="Style/navbar.css">
     <link rel="stylesheet" href="Style/main.css">
     <link rel="stylesheet" href="style/slider.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
     <!-- NAVBAR STARTS HERE -->
     <div class="navbar">
         <nav>
-            <h2 class="logo">Moive<span>Mania</span>
-            </h2>
+            <div class="logo">
+                <h2>Movie<span>Mania</span></h2>
+            </div>
             <ul class="searching-area">
                 <li><input type="text" placeholder="enter movie name here..." id="search-box"></li>
                 <li><button id="search-btn">search</button></li>
@@ -38,7 +34,7 @@
 
         <!-- LEFT BOX -->
         <section class="left-box">
-            <h2>Genres</h2>
+            <h2 onclick="jarvis('anshul')">Genres</h2>
             <ul class="genre-list">
                 <li><a href="#" id="28">Action</a></li>
                 <li><a href="#" id="12">Adventure</a></li>
@@ -65,18 +61,23 @@
 
         <!-- RIGHT BOX -->
         <section class="movies-container">
-            
-            <div class="slider-container">
+           
+
+            <!-- SLIDER STARTS HERE -->
+            <!-- <div class="slider-container">
                 <div class="slides">
-                    <div class="slide"><img src="slide.jpg"></div>
+                    <button id="previousBtn"><i class='bx bx-chevron-left bx-lg'></i></button>
+                    <button id="nextBtn"><i class='bx bx-chevron-right bx-lg'></i></button>
                 </div>
-            </div>
+            </div> -->
+            <!-- SLIDER ENDS HERE -->
+
 
             <!-- HOME PAGE  -->
             <div class="upcoming-movies">
                 <h1>Upcoming <span>Movies</span></h1>
                 <div class="movies-list" id="upcoming">
-                    
+
                     <!-- MOVIE CARD WILL BE ADDED HERE THROUGH JAVASCRIPT-->
                 </div>
             </div>
@@ -88,7 +89,7 @@
                 </div>
             </div>
 
-            <div class="toprated-movies">
+            <div class="toprated-movies" id="top">
                 <h1>Top Rated <span>Movies</span></h1>
                 <div class="movies-list" id="top_rated">
                     <!-- MOVIE CARD WILL BE ADDED HERE THROUGH JAVASCRIPT-->
@@ -107,7 +108,8 @@
         <p>Thanks for using the app</p>
     </footer> -->
 </body>
+<!-- <script src="JS/slider.js"></script> -->
 <script src="JS/home.js"></script>
 <script src="JS/genreMovie.js"></script>
-<script src="JS/cardmaker.js"></script>
+<script src="JS/movieDetail.js"></script>
 </html>

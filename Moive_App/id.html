@@ -1,35 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Append DIV</title>
-    <style>
-      .box{
-        width: 50vw;
-        height: 10vh;
-        border: 1px solid black;
-        margin: 10px;
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      width: 100%;
+      height: 40vh;
+      border: 1px solid black;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .box1{
+      width: 20%;
+      border: 1px solid black;
+      height: 30vh;
+    }
+
+    .box1 img{
+      height: 100%;
+      width: 100%;
+    }
+    .box2{
+      width: 80%;
+      border: 1px solid black;
+      height: 30vh;
+    }
+  </style>
 </head>
 <body>
 
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<script>
-    // Function to create and append a div element
-
-        let elems = document.querySelectorAll(".box")
-        var div = document.createElement("div");
-        div.textContent = "This is a dynamically created div.";
-        elems[0].appendChild(div)
-        elems[1].appendChild(div)
-        elems[2].appendChild(div)
-   
-        console.log(elems[0],elems[1],elems[2])
-
- 
-</script>
+  <div class="container">
+    <div class="box1">
+      <img src="Image/slide.jpg" alt="">
+    </div>
+    <div class="box2"></div>
+  </div>
 
 </body>
+<script>
+ const apiKey = 'YOUR_API_KEY';
+
+async function fetchGenres() {
+  try {
+    const response = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=f02887f0a810237e3e7fad0213050302`);
+    const data = await response.json();
+    return data.genres;
+  } catch (error) {
+    console.error('Error fetching genre data:', error);
+    return [];
+  }
+}
+
+async function getGenreNames(genreIds) {
+  const genres = await fetchGenres();
+  const genreNames = [];
+  for (const genreId of genreIds) {
+    const genre = genres.find((genre) => genre.id === genreId);
+    genreNames.push(genre ? genre.name : 'Unknown Genre');
+  }
+  return genreNames;
+}
+
+const movie = {
+  title: 'Example Movie',
+  genre_ids: [28, 35, 12]
+};
+
+getGenreNames(movie.genre_ids)
+  .then((genreNames) => {
+    console.log(`Title: ${movie.title}`);
+    console.log(`Genres: ${genreNames.join(', ')}`);
+  })
+  .catch((error) => {
+    console.error('Error getting genre names:', error);
+  });
+
+
+</script>
 </html>
